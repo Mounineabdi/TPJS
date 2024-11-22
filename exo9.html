@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 9</title>
+</head>
+<body>
+    <form onsubmit="validerFormulaire(event)">
+        <label>Nom :</label>
+        <input type="text" id="nom" required>
+
+        <label>Email :</label>
+        <input type="email" id="email" required>
+        
+        <button type="submit">Soumettre</button>
+    </form>
+    <script>
+        function validerFormulaire(event) {
+            event.preventDefault();
+            const nom = document.getElementById("nom").value;
+            const email = document.getElementById("email").value;
+            if (!nom || !email) {
+                alert("Tous les champs sont obligatoires !");
+            } else {
+                alert("Formulaire valide !");
+            }
+        }
+    </script>
+</body>
+</html>
